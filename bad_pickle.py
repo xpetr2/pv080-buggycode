@@ -7,7 +7,7 @@ from subprocess import call, Popen
 import base64
 try:
     import cPickle as pickle
-except _:
+except ImportError:
     import pickle
 
 
@@ -22,7 +22,7 @@ def transcode_file(filename):
 def foo_assert(user):
     """Assert statements"""
     assert user.is_admin, 'user does not have access'
-   # secure code...
+    # secure code...
 
 
 # Pickles
